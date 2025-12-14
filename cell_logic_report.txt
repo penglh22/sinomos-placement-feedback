@@ -1,0 +1,469 @@
+CELL LOGIC REPORT
+
+CELL: DFFR_X1
+TYPE: SEQUENTIAL
+----------------------------------------
+FLIP-FLOP DEFINITION:
+  Q Pin: IQ
+  QN Pin: IQN
+  Next State: D
+  Clocked On: CK
+  Clear: !RN
+PINS:
+   
+   
+  D: input [Cap: 1.128277]
+  RN: input [Cap: 1.778528]
+  CK: input [CLOCK] [Cap: 0.976605]
+  Q: output [Cap: 60.5774]
+    Function: IQ
+  QN: output [Cap: 60.2722]
+    Function: IQN
+OUTPUT FUNCTIONS:
+  Q: IQ
+  QN: IQN
+INFERRED LOGIC: D Flip-Flop with reset (!RN): Q(t+1) = D on CK rising edge
+
+CELL: DFF_X1
+TYPE: SEQUENTIAL
+----------------------------------------
+FLIP-FLOP DEFINITION:
+  Q Pin: IQ
+  QN Pin: IQN
+  Next State: D
+  Clocked On: CK
+  Clear: N/A
+PINS:
+   
+   
+  D: input [Cap: 1.14029]
+  CK: input [CLOCK] [Cap: 0.949653]
+  Q: output [Cap: 60.73]
+    Function: IQ
+  QN: output [Cap: 60.2722]
+    Function: IQN
+OUTPUT FUNCTIONS:
+  Q: IQ
+  QN: IQN
+INFERRED LOGIC: D Flip-Flop: Q(t+1) = D on CK rising edge
+
+CELL: AND2_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.918145]
+  A2: input [Cap: 0.97463]
+  ZN: output [Cap: 60.5774]
+    Function: (A1 & A2)
+OUTPUT FUNCTIONS:
+  ZN: (A1 & A2)
+INFERRED LOGIC: 2-input AND Gate: Z = A & B
+
+CELL: AND3_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.879747]
+  A2: input [Cap: 0.927525]
+  A3: input [Cap: 0.964824]
+  ZN: output [Cap: 60.4248]
+    Function: ((A1 & A2) & A3)
+OUTPUT FUNCTIONS:
+  ZN: ((A1 & A2) & A3)
+INFERRED LOGIC: AND-type function: ((A1 & A2) & A3)
+
+CELL: AND4_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.856528]
+  A2: input [Cap: 0.902272]
+  A3: input [Cap: 0.924115]
+  A4: input [Cap: 0.944508]
+  ZN: output [Cap: 60.2722]
+    Function: (((A1 & A2) & A3) & A4)
+OUTPUT FUNCTIONS:
+  ZN: (((A1 & A2) & A3) & A4)
+INFERRED LOGIC: AND-type function: (((A1 & A2) & A3) & A4)
+
+CELL: DLH_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  D: input [Cap: 0.914139]
+  G: input [CLOCK] [Cap: 0.985498]
+  Q: output [Cap: 60.5774]
+    Function: IQ
+OUTPUT FUNCTIONS:
+  Q: IQ
+
+CELL: AO21_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A: input [Cap: 1.626352]
+  B1: input [Cap: 1.647003]
+  B2: input [Cap: 1.676853]
+  ZN: output [Cap: 25.3296]
+    Function: (A | (B1 & B2))
+OUTPUT FUNCTIONS:
+  ZN: (A | (B1 & B2))
+INFERRED LOGIC: OR-type function: (A | (B1 & B2))
+
+CELL: AOI21_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A: input [Cap: 1.626352]
+  B1: input [Cap: 1.647003]
+  B2: input [Cap: 1.676853]
+  ZN: output [Cap: 25.3296]
+    Function: !(A | (B1 & B2))
+OUTPUT FUNCTIONS:
+  ZN: !(A | (B1 & B2))
+INFERRED LOGIC: OR-type function: !(A | (B1 & B2))
+
+CELL: AOI22_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 1.687512]
+  A2: input [Cap: 1.689746]
+  B1: input [Cap: 1.58401]
+  B2: input [Cap: 1.623031]
+  ZN: output [Cap: 24.6048]
+    Function: !((A1 & A2) | (B1 & B2))
+OUTPUT FUNCTIONS:
+  ZN: !((A1 & A2) | (B1 & B2))
+INFERRED LOGIC: OR-type function: !((A1 & A2) | (B1 & B2))
+
+CELL: MUX3_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A: input [Cap: 1.67753]
+  B1: input [Cap: 1.58162]
+  B2: input [Cap: 1.628297]
+  C1: input [Cap: 1.632251]
+  C2: input [Cap: 1.706745]
+  ZN: output [Cap: 13.8092]
+    Function: (!C1 & ((!C2 & B1) | (C2 & B2))) | (C1 & A)
+OUTPUT FUNCTIONS:
+  ZN: (!C1 & ((!C2 & B1) | (C2 & B2))) | (C1 & A)
+INFERRED LOGIC: OR-type function: (!C1 & ((!C2 & B1) | (C2 & B2))) | (C1 & A)
+
+CELL: MUX4_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 1.636678]
+  A2: input [Cap: 1.695263]
+  B1: input [Cap: 1.57913]
+  B2: input [Cap: 1.621925]
+  C1: input [Cap: 1.547208]
+  C2: input [Cap: 1.586715]
+  ZN: output [Cap: 13.0081]
+    Function: (!C1 & ((!C2 & A1) | (C2 & A2))) | (C1 & ((!C2 & B1) | (C2 & B2)))
+OUTPUT FUNCTIONS:
+  ZN: (!C1 & ((!C2 & A1) | (C2 & A2))) | (C1 & ((!C2 & B1) | (C2 & B2)))
+INFERRED LOGIC: OR-type function: (!C1 & ((!C2 & A1) | (C2 & A2))) | (C1 & ((!C2 & B1) | (C2 & B2)))
+
+CELL: MUX2_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A: input [Cap: 0.94642]
+  B: input [Cap: 0.944775]
+  S: input [Cap: 1.919942]
+  Z: output [Cap: 60.5011]
+    Function: ((S & B) | (A & !S))
+OUTPUT FUNCTIONS:
+  Z: ((S & B) | (A & !S))
+INFERRED LOGIC: OR-type function: ((S & B) | (A & !S))
+
+CELL: XOR2_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A: input [Cap: 1.70023]
+  B: input [Cap: 2.573608]
+  Z: output [Cap: 25.3296]
+    Function: (A ^ B)
+  A1: input [Cap: 0.946814]
+  A2: input [Cap: 0.941939]
+  A3: input [Cap: 1.635974]
+  ZN: output [Cap: 60.5774]
+    Function: (A1 | A2)
+  A4: input [Cap: 1.60595]
+OUTPUT FUNCTIONS:
+  Z: (A ^ B)
+  ZN: (A1 | A2)
+INFERRED LOGIC: 2-input OR Gate: Z = A | B
+
+CELL: XOR3_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.879747]
+  A2: input [Cap: 0.927525]
+  A3: input [Cap: 0.964824]
+  ZN: output [Cap: 60.4248]
+    Function: ((A1 ^ A2) ^ A3)
+OUTPUT FUNCTIONS:
+  ZN: ((A1 ^ A2) ^ A3)
+INFERRED LOGIC: XOR-type function: ((A1 ^ A2) ^ A3)
+
+CELL: XOR4_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.856528]
+  A2: input [Cap: 0.902272]
+  A3: input [Cap: 0.924115]
+  A4: input [Cap: 0.944508]
+  ZN: output [Cap: 60.2722]
+    Function: (((A1 ^ A2) ^ A3) ^ A4)
+OUTPUT FUNCTIONS:
+  ZN: (((A1 ^ A2) ^ A3) ^ A4)
+INFERRED LOGIC: XOR-type function: (((A1 ^ A2) ^ A3) ^ A4)
+
+CELL: XNOR2_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A: input [Cap: 2.232754]
+  B: input [Cap: 2.573608]
+  ZN: output [Cap: 26.0162]
+    Function: !(A ^ B)
+OUTPUT FUNCTIONS:
+  ZN: !(A ^ B)
+INFERRED LOGIC: 2-input OR Gate: Z = A | B
+
+CELL: XNOR3_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.879747]
+  A2: input [Cap: 0.927525]
+  A3: input [Cap: 0.964824]
+  ZN: output [Cap: 60.4248]
+    Function: !((A1 ^ A2) ^ A3)
+OUTPUT FUNCTIONS:
+  ZN: !((A1 ^ A2) ^ A3)
+INFERRED LOGIC: XOR-type function: !((A1 ^ A2) ^ A3)
+
+CELL: XNOR4_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.856528]
+  A2: input [Cap: 0.902272]
+  A3: input [Cap: 0.924115]
+  A4: input [Cap: 0.944508]
+  ZN: output [Cap: 60.2722]
+    Function: !(((A1 ^ A2) ^ A3) ^ A4)
+OUTPUT FUNCTIONS:
+  ZN: !(((A1 ^ A2) ^ A3) ^ A4)
+INFERRED LOGIC: XOR-type function: !(((A1 ^ A2) ^ A3) ^ A4)
+
+CELL: MAJ23_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.959052]
+  A2: input [Cap: 0.940092]
+  A3: input [Cap: 0.921561]
+  ZN: output [Cap: 60.5774]
+    Function: ((A1 & A2) | (A2 & A3) | (A3 & A1))
+OUTPUT FUNCTIONS:
+  ZN: ((A1 & A2) | (A2 & A3) | (A3 & A1))
+INFERRED LOGIC: OR-type function: ((A1 & A2) | (A2 & A3) | (A3 & A1))
+
+CELL: OR3_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.959052]
+  A2: input [Cap: 0.940092]
+  A3: input [Cap: 0.921561]
+  ZN: output [Cap: 60.5774]
+    Function: ((A1 | A2) | A3)
+OUTPUT FUNCTIONS:
+  ZN: ((A1 | A2) | A3)
+INFERRED LOGIC: OR-type function: ((A1 | A2) | A3)
+
+CELL: OR4_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.941245]
+  A2: input [Cap: 0.938321]
+  A3: input [Cap: 0.923766]
+  A4: input [Cap: 0.914189]
+  ZN: output [Cap: 60.5774]
+    Function: (((A1 | A2) | A3) | A4)
+OUTPUT FUNCTIONS:
+  ZN: (((A1 | A2) | A3) | A4)
+INFERRED LOGIC: OR-type function: (((A1 | A2) | A3) | A4)
+
+CELL: NAND2_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 1.599032]
+  A2: input [Cap: 1.664199]
+  ZN: output [Cap: 59.3567]
+    Function: !(A1 & A2)
+OUTPUT FUNCTIONS:
+  ZN: !(A1 & A2)
+INFERRED LOGIC: 2-input AND Gate: Z = A & B
+
+CELL: NAND3_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 1.590286]
+  A2: input [Cap: 1.621225]
+  A3: input [Cap: 1.650377]
+  ZN: output [Cap: 58.3649]
+    Function: !((A1 & A2) & A3)
+OUTPUT FUNCTIONS:
+  ZN: !((A1 & A2) & A3)
+INFERRED LOGIC: AND-type function: !((A1 & A2) & A3)
+
+CELL: NAND4_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 1.522092]
+  A2: input [Cap: 1.59521]
+  A3: input [Cap: 1.63809]
+  A4: input [Cap: 1.659913]
+  ZN: output [Cap: 55.9998]
+    Function: !(((A1 & A2) & A3) & A4)
+OUTPUT FUNCTIONS:
+  ZN: !(((A1 & A2) & A3) & A4)
+INFERRED LOGIC: AND-type function: !(((A1 & A2) & A3) & A4)
+
+CELL: NOR2_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 1.714471]
+  A2: input [Cap: 1.651345]
+  ZN: output [Cap: 26.7029]
+    Function: !(A1 | A2)
+OUTPUT FUNCTIONS:
+  ZN: !(A1 | A2)
+INFERRED LOGIC: 2-input OR Gate: Z = A | B
+
+CELL: NOR3_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 1.763571]
+  A2: input [Cap: 1.663842]
+  A3: input [Cap: 1.616298]
+  ZN: output [Cap: 16.0217]
+    Function: !((A1 | A2) | A3)
+OUTPUT FUNCTIONS:
+  ZN: !((A1 | A2) | A3)
+INFERRED LOGIC: OR-type function: !((A1 | A2) | A3)
+
+CELL: NOR4_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 1.736804]
+  A2: input [Cap: 1.67413]
+  A3: input [Cap: 1.635974]
+  A4: input [Cap: 1.60595]
+  ZN: output [Cap: 10.4713]
+    Function: !(((A1 | A2) | A3) | A4)
+OUTPUT FUNCTIONS:
+  ZN: !(((A1 | A2) | A3) | A4)
+INFERRED LOGIC: OR-type function: !(((A1 | A2) | A3) | A4)
+
+CELL: INV_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A: input [Cap: 1.70023]
+  ZN: output [Cap: 60.73]
+    Function: !A
+OUTPUT FUNCTIONS:
+  ZN: !A
+INFERRED LOGIC: Inverter: Z = !A
+
+CELL: OR2_X1
+TYPE: COMBINATIONAL
+----------------------------------------
+PINS:
+   
+   
+  A1: input [Cap: 0.946814]
+  A2: input [Cap: 0.941939]
+  ZN: output [Cap: 60.5774]
+    Function: (A1 | A2)
+OUTPUT FUNCTIONS:
+  ZN: (A1 | A2)
+INFERRED LOGIC: 2-input OR Gate: Z = A | B
+
+================================================================================
+SUMMARY:
+Total Cells: 29
+Sequential Cells: 2
+Combinational Cells: 27
+================================================================================

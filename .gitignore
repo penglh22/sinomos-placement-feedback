@@ -1,0 +1,14 @@
+@"
+build/
+dist/
+*.o
+*.exe
+
+.vscode/
+.idea/
+
+/bsd-master/
+
+
+*.log
+"@ | Out-File -Encoding utf8 .gitignore
