@@ -1,6 +1,6 @@
 # BSD Layout Routing Project
 
-This project implements layout routing for a Binary Decision Diagram (BDD) represented in a BSD file format. The main goal is to optimize the layout of transistors based on a decision tree structure using a simulated annealing algorithm.
+### NEED UPDATE 
 
 ## BSD File Format
 
