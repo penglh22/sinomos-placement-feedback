@@ -261,11 +261,11 @@ class BDD:
 
     def analyze_structure(self):
         """分析BDD结构"""
-        print("BDD结构分析:")
-        print(f"  层数: {len(self.layers)}")
-        print(f"  变量序列: {self.var_sequence}")
-        print(f"  晶体管总数: {self.get_transistor_count()}")
-        print(f"  网络总数: {len(self.get_nets())}")
+        # print("BDD结构分析:")
+        # print(f"  层数: {len(self.layers)}")
+        # print(f"  变量序列: {self.var_sequence}")
+        # print(f"  晶体管总数: {self.get_transistor_count()}")
+        # print(f"  网络总数: {len(self.get_nets())}")
 
         # 按层和类型统计晶体管
         layer_stats = {}
@@ -275,21 +275,22 @@ class BDD:
                 layer_stats[layer] = {"switch": 0, "leaf_switch": 0, "leaf": 0}
             layer_stats[layer][t["type"]] += 1
 
-        print("  各层晶体管统计:")
+        # print("  各层晶体管统计:")
         for layer, stats in layer_stats.items():
             total = sum(stats.values())
-            print(
-                f"    Layer{layer}: {total}个晶体管 "
-                f"({stats['switch']}个开关, {stats['leaf_switch']}个叶子开关, {stats['leaf']}个叶子)"
-            )
+            #print(
+            #    f"    Layer{layer}: {total}个晶体管 "
+            #    f"({stats['switch']}个开关, {stats['leaf_switch']}个叶子开关, {stats['leaf']}个叶子)"
+            #)
 
         # 显示每层的具体结构
-        print("\n  各层详细结构:")
+        #print("\n  各层详细结构:")
         for layer_idx, layer in enumerate(self.layers):
-            print(f"    Layer{layer_idx}: {layer}")
+            #print(f"    Layer{layer_idx}: {layer}")
             if layer_idx < len(self.var_sequence):
-                print(f"      控制变量: var_{self.var_sequence[layer_idx]}")
-                print(f"      每个节点产生2个晶体管")
+                pass
+                #print(f"      控制变量: var_{self.var_sequence[layer_idx]}")
+                #print(f"      每个节点产生2个晶体管")
 
     def validate_structure(self):
         """验证BDD结构的正确性"""

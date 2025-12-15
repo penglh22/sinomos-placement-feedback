@@ -22,7 +22,7 @@ class EnhancedSimulatedAnnealing:
         self.best_layout = self.current_layout
         best_cost = current_cost
 
-        print(f"开始优化，初始成本: {current_cost:.2f}")
+        # print(f"开始优化，初始成本: {current_cost:.2f}")
 
         for i in range(iterations):
             # --- FIX START ---
@@ -48,8 +48,8 @@ class EnhancedSimulatedAnnealing:
             temperature *= self.cooling_rate
 
             if temperature < self.min_temperature:
-                print("温度达到下限，提前结束优化。")
+                # print("温度达到下限，提前结束优化。")
                 break
 
-        print(f"优化完成，最终成本: {best_cost:.2f}")
+        # print(f"优化完成，最终成本: {best_cost:.2f}")
         return self.best_layout
